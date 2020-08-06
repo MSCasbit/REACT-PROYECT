@@ -8,6 +8,7 @@ import { Container, Row, Col } from 'reactstrap';
 import FunctionGreet from "./components/FunctionGreet"
 import ClassGreet from "./components/ClassGreet"
 import Post from './components/POST/index'
+import Clock from './components/Clock/index'
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         </a>
         <FunctionGreet firstname="Mauricio" lastname="Sanchez" />
         <ClassGreet firstname="vicente" lastname="muñoz" />
+        <Clock />
       </header>
       <Container>
         <Row>
