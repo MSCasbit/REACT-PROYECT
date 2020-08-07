@@ -9,6 +9,8 @@ import FunctionGreet from "./components/FunctionGreet"
 import ClassGreet from "./components/ClassGreet"
 import Post from './components/POST/index'
 import Clock from './components/Clock/index'
+import SwitchExample from './components/SwitchExample'
+import List from './components/List/index'
 
 function App() {
   return (
@@ -29,41 +31,10 @@ function App() {
         <FunctionGreet firstname="Mauricio" lastname="Sanchez" />
         <ClassGreet firstname="vicente" lastname="muñoz" />
         <Clock />
+        <SwitchExample />
+        <List />
       </header>
-      <Container>
-        <Row>
-          <Col xs='12' md='4'>
-            <Post
-              img='https://cnet3.cbsistatic.com/img/uK0qlUTQJnQyehKBKQxcaJzzLmQ=/756x567/2020/08/05/7a674763-fb6c-48c8-8a95-5df0eef3ba92/gettyimages-1227908824.jpg'
-              title='That´s insane '
-              subtitle='What´s happend really? '
-              text='Local media outlets said the explosions happened in the Port area where warehouses held explosive materials and possibly fireworks. 
-
-              “The official story that came out is that this is a fireworks factory,” Mr Ware told Sky News.'
-            />
-          </Col>
-          <Col xs='12' md='4'>
-            <Post
-              img='https://cnet3.cbsistatic.com/img/uK0qlUTQJnQyehKBKQxcaJzzLmQ=/756x567/2020/08/05/7a674763-fb6c-48c8-8a95-5df0eef3ba92/gettyimages-1227908824.jpg'
-              title='That´s insane'
-              subtitle='What´s happend really '
-              text='Local media outlets said the explosions happened in the Port area where warehouses held explosive materials and possibly fireworks. 
-
-              “The official story that came out is that this is a fireworks factory,” Mr Ware told Sky News.'
-            />
-          </Col>
-          <Col xs='12' md='4'>
-            <Post
-              img='https://cnet3.cbsistatic.com/img/uK0qlUTQJnQyehKBKQxcaJzzLmQ=/756x567/2020/08/05/7a674763-fb6c-48c8-8a95-5df0eef3ba92/gettyimages-1227908824.jpg'
-              title='That´s insane'
-              subtitle='What´s happend really'
-              text='Local media outlets said the explosions happened in the Port area where warehouses held explosive materials and possibly fireworks. 
-
-              “The official story that came out is that this is a fireworks factory,” Mr Ware told Sky News.'
-            />
-          </Col>
-        </Row>
-      </Container>
+      <Post />
     </div>
   )
 }

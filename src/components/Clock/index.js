@@ -42,11 +42,6 @@ class CLock extends Component {
   }
 
   render() {
-    if (this.state.counter % 2 === 0) {
-      this.state.color = "danger"
-    } else {
-      this.state.color = "warning"
-    }
     return (
       <>
         <h1>
