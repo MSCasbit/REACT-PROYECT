@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react'
-import { Container, Row, ListGroup, ListGroupItem, Col } from 'reactstrap'
+import { Container, Row, ListGroup, ListGroupItem, Col, Badge, Button } from 'reactstrap'
 import "./List.css"
 
 const elements = [
@@ -18,13 +18,44 @@ const elements = [
   }
 ]
 
+
 class List extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeList: true,
+    };
+    this.handleShowListClick = this.handleShowListClick.bind(this);
+  }
+
+  handleShowListClick() {
+    const { activeList } = this.state;
+    this.setState({
+      activeList: !activeList,
+    });
+  }
+
   render() {
-
-    const UIElements = elements.map(({ text }) => (
-      <ListGroupItem className="List-item">{text}</ListGroupItem>
-
-    ))
+    const { activeList } = this.state;
+    let UIElements = elements.map(({ text }, index) => {
+      const upperText = text.toUpperCase();
+      return (
+        <ListGroupItem
+          onClick={this.handleListItemClick}
+          key={index}
+          className="List-item"
+        >
+          {upperText}
+        </ListGroupItem>
+      );
+    });
+    if (!UIElements.length) {
+      UIElements = (
+        <h1>
+          No hay <Badge color="danger">elementos</Badge>
+        </h1>
+      )
+    }
 
 
     return (
@@ -35,6 +66,10 @@ class List extends Component {
               {UIElements}
             </ListGroup>
           </Col>
+          <Col>{activeList ? <ListGroup>{UIElements}</ListGroup> : null}</Col>
+          <Button onClick={this.handleShowListClick}>
+            {activeList ? "Hide list" : "Show List"}
+          </Button>
         </Row>
       </Container>
     )

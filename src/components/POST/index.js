@@ -66,12 +66,24 @@ class Post extends Component {
         </CardBody>
       </Card>
     ))
+
+
+
+    let UIFragment = POSTElements
+    if (!UIFragment.length) {
+      UIFragment = (
+        <h1>No hay elementos.</h1>
+      )
+    }
+
+
+
     return (
       <Container>
         <div>
           <Col>
             <Row>
-              {POSTElements}
+              {UIFragment}
             </Row>
           </Col>
         </div>
