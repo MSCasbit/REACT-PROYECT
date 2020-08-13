@@ -22,6 +22,12 @@ function NavB({ currentPath }) {
             <li><Link to="/CurrencyConverter">corredor de divisas</Link></li>
           ) : null
         }
+        {
+          currentPath !== 'Users' ? (
+            <li><Link to="/Users">Usuarios</Link></li>
+          ) : null
+        }
+
       </ul>
     </nav>
   )

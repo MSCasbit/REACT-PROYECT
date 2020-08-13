@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import BlogNotes from "./screens/NotesBlog"
 import CurrencyConverter from "./screens/CurrencyConverter"
 import NavB from "./components/NavBar"
+import Users from "./screens/Users"
 function App() {
   return (
     <Router>
@@ -28,6 +29,10 @@ function App() {
           <Route path="/CurrencyConverter">
             <NavB currentPath="CurrencyConverter" />
             <CurrencyConverter />
+          </Route>
+          <Route path="/Users">
+            <NavB currentPath="/Users" />
+            <Users />
           </Route>
         </Switch>
 
